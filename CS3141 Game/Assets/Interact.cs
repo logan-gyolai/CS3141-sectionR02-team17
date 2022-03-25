@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using System;
 
 public class Interact : MonoBehaviour
 {
     public bool inRange = false;
     public KeyCode interactKey;
     public UnityEvent interact;
-    [SerializeField] string message;
+    [SerializeField] string interactMessage;
+    [SerializeField] string resultMessage;
     [SerializeField] GameObject displayedText;
 
     // Start is called before the first frame update
@@ -24,6 +26,7 @@ public class Interact : MonoBehaviour
         {
             if(Input.GetKeyDown(interactKey)) //true if interact key (space) is pressed down
             {
+                ShowMessage(resultMessage);
                 interact.Invoke(); //invoke event
             }
         }
@@ -34,7 +37,7 @@ public class Interact : MonoBehaviour
         if (collision.gameObject.CompareTag("Player")) 
         {
             inRange = true;
-            ShowMessage(message);
+            ShowMessage(interactMessage);
             Debug.Log("Player in range");
         }
     }
