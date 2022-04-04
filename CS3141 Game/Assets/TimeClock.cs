@@ -4,17 +4,16 @@ using UnityEngine;
 
 public class TimeClock : MonoBehaviour
 {
-    [SerializeField] GameObject clock;
+    [SerializeField] GameObject clockText;
     public int day = 0;
     public class Clock
     {
-        int Hours;
-        int Minutes;
+        
+        public int Hours = 8;
+        public int Minutes = 0;
 
-        public Clock(int hours, int minutes)
+        public Clock()
         {
-            this.Hours = hours;
-            this.Minutes = minutes;
         }
 
         public int getHours()
@@ -26,25 +25,33 @@ public class TimeClock : MonoBehaviour
             return this.Minutes;
         }
 
-        public string getTimeString()
+        
+        
+    }
+
+    public Clock clock = new Clock();
+
+    public string getTimeString()
+    {
+        string hours = clock.getHours().ToString();
+        string minutes;
+
+        if (clock.getMinutes() < 10)
         {
-            string hours = this.getHours().ToString();
-            string minutes;
-
-            if (this.getMinutes() < 10) 
-            {
-                minutes = "0" + this.getMinutes().ToString();
-            }
-
-            else
-            {
-                minutes = this.getMinutes().ToString();
-            }
-            return hours + ":" + minutes;
+            minutes = "0" + clock.getMinutes().ToString();
         }
-        public void passTime(int hours, int minutes)
+
+        else
         {
-
+            minutes = clock.getMinutes().ToString();
         }
+        return hours + ":" + minutes;
+    }
+    public void passTime(int hours, int minutes)
+    {
+        clock.Hours += hours;
+        clock.Minutes += minutes;
+
+        clockText.GetComponent<TextMesh>().text = getTimeString();
     }
 }

@@ -12,6 +12,20 @@ public class Interact : MonoBehaviour
     [SerializeField] string interactMessage;
     [SerializeField] string resultMessage;
     [SerializeField] GameObject displayedText;
+    [SerializeField] Stats stats;
+    public int energyInc = 0;
+    public int healthInc = 0;
+    public int intelligenceInc = 0;
+    public int socialInc = 0;
+    public int drunkennessInc = 0;
+    public int athleticnessInc = 0;
+    public int coldnessInc = 0;
+    public int decisionMakingInc = 0;
+    public int moneyInc = 0;
+    [SerializeField] TimeClock timeClock;
+    public int timeCostHours = 0;
+    public int timeCostMinutes = 0;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +41,18 @@ public class Interact : MonoBehaviour
             if(Input.GetKeyDown(interactKey)) //true if interact key (space) is pressed down
             {
                 ShowMessage(resultMessage);
+                stats.energy.changeStat(energyInc);
+                stats.intelligence.changeStat(intelligenceInc);
+                stats.health.changeStat(healthInc);
+                stats.social.changeStat(socialInc);
+                stats.drunkenness.changeStat(drunkennessInc);
+                stats.decisionMaking.changeStat(decisionMakingInc);
+                stats.athleticness.changeStat(athleticnessInc);
+                stats.coldness.changeStat(coldnessInc);
+                stats.money.changeStat(moneyInc);
+
+                timeClock.passTime(timeCostHours, timeCostMinutes);
+
                 interact.Invoke(); //invoke event
             }
         }

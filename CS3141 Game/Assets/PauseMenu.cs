@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
+    [SerializeField] Stats stats;
     public GameObject pauseMenu;
     public bool isPaused = false;
     public KeyCode pauseKey;
@@ -11,7 +12,7 @@ public class PauseMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pauseMenu.SetActive(true);
+        pauseMenu.SetActive(false);
     }
 
     // Update is called once per frame
@@ -35,6 +36,9 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
+        stats.printStats();
+
+
     }
 
     public void ResumeGame()
