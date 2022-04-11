@@ -13,7 +13,7 @@ public class Interact : MonoBehaviour
     [SerializeField] string resultMessage;
     [SerializeField] GameObject displayedText;
     [SerializeField] Stats stats;
-    public int energyInc = 0;
+    public int energyInc = 0; //how much this interaction will change this stat
     public int healthInc = 0;
     public int intelligenceInc = 0;
     public int socialInc = 0;
