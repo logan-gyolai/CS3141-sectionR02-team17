@@ -9,7 +9,7 @@ public class TimeClock : MonoBehaviour
     public class Clock
     {
         
-        public int Hours = 8;
+        public int Hours = 13;
         public int Minutes = 0;
 
         public Clock()

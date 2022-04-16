@@ -1320,7 +1320,7 @@ MonoBehaviour:
   resultMessage: You Slept
   displayedText: {fileID: 727714898}
   stats: {fileID: 794106178}
-  energyInc: 0
+  energyInc: 16
   healthInc: 0
   intelligenceInc: 0
   socialInc: 0
