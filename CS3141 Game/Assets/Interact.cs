@@ -25,6 +25,7 @@ public class Interact : MonoBehaviour
     [SerializeField] TimeClock timeClock;
     public int timeCostHours = 0;
     public int timeCostMinutes = 0;
+    public int energyMod = 0;
     
 
     // Start is called before the first frame update
@@ -40,7 +41,7 @@ public class Interact : MonoBehaviour
         {
             if(Input.GetKeyDown(interactKey)) //true if interact key (space) is pressed down
             {
-                if (stats.energy.getStat() == 0) { ShowMessage("You need to sleep"); }
+                if (stats.energy.getStat() + energyMod == 0) { ShowMessage("You need to sleep"); }
 
                 else
                 {
