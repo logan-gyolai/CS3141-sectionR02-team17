@@ -40,21 +40,27 @@ public class Interact : MonoBehaviour
         {
             if(Input.GetKeyDown(interactKey)) //true if interact key (space) is pressed down
             {
-                stats.energy.changeStat(energyInc);
-                stats.intelligence.changeStat(intelligenceInc);
-                stats.health.changeStat(healthInc);
-                stats.social.changeStat(socialInc);
-                stats.drunkenness.changeStat(drunkennessInc);
-                stats.decisionMaking.changeStat(decisionMakingInc);
-                stats.athleticness.changeStat(athleticnessInc);
-                stats.coldness.changeStat(coldnessInc);
-                stats.money.changeStat(moneyInc);
+                if (stats.energy.getStat() == 0) { ShowMessage("You need to sleep"); }
 
-                timeClock.passTime(timeCostHours, timeCostMinutes);
+                else
+                {
+                    stats.energy.changeStat(energyInc);
+                    stats.intelligence.changeStat(intelligenceInc);
+                    stats.health.changeStat(healthInc);
+                    stats.social.changeStat(socialInc);
+                    stats.drunkenness.changeStat(drunkennessInc);
+                    stats.decisionMaking.changeStat(decisionMakingInc);
+                    stats.athleticness.changeStat(athleticnessInc);
+                    stats.coldness.changeStat(coldnessInc);
+                    stats.money.changeStat(moneyInc);
 
-                ShowMessage(resultMessage);
+                    timeClock.passTime(timeCostHours, timeCostMinutes);
 
-                interact.Invoke(); //invoke event
+                    ShowMessage(resultMessage);
+
+                    interact.Invoke(); //invoke event
+                }
+                
             }
         }
     }
