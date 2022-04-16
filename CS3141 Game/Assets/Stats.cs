@@ -67,8 +67,8 @@ public class Stats : MonoBehaviour
     public Stat coldness = new Stat(0, 0, 10);
     public Stat money = new Stat(0, 0, 99);
 
-   public void printStats()
-    {
+    public void printStats()
+    { 
         string text = "Energy: " + energy.getStatString() +
             "\n Health: " + health.getStatString() +
             "\n Intelligence: " + intelligence.getStatString() +

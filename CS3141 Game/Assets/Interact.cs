@@ -55,6 +55,7 @@ public class Interact : MonoBehaviour
                 ShowMessage(resultMessage);
 
                 interact.Invoke(); //invoke event
+            }
         }
     }
 
