@@ -1320,7 +1320,7 @@ MonoBehaviour:
   interactMessage: Press Space to Sleep
   resultMessage: You Slept
   displayedText: {fileID: 727714898}
-  stats: {fileID: 0}
+  stats: {fileID: 794106178}
   energyInc: 0
   healthInc: 0
   intelligenceInc: 0
@@ -1330,8 +1330,8 @@ MonoBehaviour:
   coldnessInc: 0
   decisionMakingInc: 0
   moneyInc: 0
-  timeClock: {fileID: 0}
-  timeCostHours: 0
+  timeClock: {fileID: 1209537110}
+  timeCostHours: 7
   timeCostMinutes: 0
 --- !u!212 &972044937
 SpriteRenderer:

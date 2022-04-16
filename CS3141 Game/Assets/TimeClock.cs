@@ -52,6 +52,12 @@ public class TimeClock : MonoBehaviour
         clock.Hours += hours;
         clock.Minutes += minutes;
 
+	if(clock.Hours >= 24)
+	{
+	    clock.Hours = clock.Hours - 24;
+	    day = day + 1;
+	}
+
         clockText.GetComponent<TextMesh>().text = getTimeString();
     }
 }
