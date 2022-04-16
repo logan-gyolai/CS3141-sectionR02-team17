@@ -5,7 +5,8 @@ using UnityEngine;
 public class TimeClock : MonoBehaviour
 {
     [SerializeField] GameObject clockText;
-    public int day = 0;
+    [SerializeField] GameObject dayText;
+    public int day = 1;
     public class Clock
     {
         
@@ -59,5 +60,6 @@ public class TimeClock : MonoBehaviour
 	}
 
         clockText.GetComponent<TextMesh>().text = getTimeString();
+        dayText.GetComponent<TextMesh>().text = "Day " + day.ToString();
     }
 }
