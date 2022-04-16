@@ -52,7 +52,7 @@ public class Stats : MonoBehaviour
             }
             else
             {
-                //how did you get here?S
+                //how did you get here?
             }
         }
 

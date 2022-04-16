@@ -543,6 +543,7 @@ MonoBehaviour:
   timeClock: {fileID: 1209537110}
   timeCostHours: 0
   timeCostMinutes: 0
+  energyMod: 0
 --- !u!212 &475730991
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1272,6 +1273,7 @@ MonoBehaviour:
   timeClock: {fileID: 1209537110}
   timeCostHours: 1
   timeCostMinutes: 0
+  energyMod: 0
 --- !u!61 &906837732
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1427,6 +1429,7 @@ MonoBehaviour:
   timeClock: {fileID: 1209537110}
   timeCostHours: 7
   timeCostMinutes: 0
+  energyMod: 1
 --- !u!212 &972044937
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2210,6 +2213,7 @@ MonoBehaviour:
   timeClock: {fileID: 1209537110}
   timeCostHours: 0
   timeCostMinutes: 0
+  energyMod: 0
 --- !u!61 &1758642360
 BoxCollider2D:
   m_ObjectHideFlags: 0

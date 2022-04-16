@@ -25,7 +25,7 @@ public class Interact : MonoBehaviour
     [SerializeField] TimeClock timeClock;
     public int timeCostHours = 0;
     public int timeCostMinutes = 0;
-    public int energyMod = 0;
+    public int energyMod = 0; //used so you can sleep when energy == 0
     
 
     // Start is called before the first frame update
