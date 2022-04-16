@@ -530,7 +530,7 @@ MonoBehaviour:
   interactMessage: Press Space to Leave Your Room
   resultMessage: Don't You Have Homework?
   displayedText: {fileID: 727714898}
-  stats: {fileID: 0}
+  stats: {fileID: 794106178}
   energyInc: 0
   healthInc: 0
   intelligenceInc: 0
@@ -540,7 +540,7 @@ MonoBehaviour:
   coldnessInc: 0
   decisionMakingInc: 0
   moneyInc: 0
-  timeClock: {fileID: 0}
+  timeClock: {fileID: 1209537110}
   timeCostHours: 0
   timeCostMinutes: 0
 --- !u!212 &475730991
@@ -703,7 +703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876a6aadd96679f41b463a5076ffd78a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 0}
+  stats: {fileID: 794106178}
   pauseMenu: {fileID: 1805921989}
   isPaused: 0
   pauseKey: 27
@@ -2102,7 +2102,7 @@ MonoBehaviour:
   interactMessage: Press Space to Change Clothes
   resultMessage: You put on a nice yellow shirt
   displayedText: {fileID: 727714898}
-  stats: {fileID: 0}
+  stats: {fileID: 794106178}
   energyInc: 0
   healthInc: 0
   intelligenceInc: 0
@@ -2112,7 +2112,7 @@ MonoBehaviour:
   coldnessInc: 0
   decisionMakingInc: 0
   moneyInc: 0
-  timeClock: {fileID: 0}
+  timeClock: {fileID: 1209537110}
   timeCostHours: 0
   timeCostMinutes: 0
 --- !u!61 &1758642360
