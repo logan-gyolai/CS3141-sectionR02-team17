@@ -42,6 +42,18 @@ public class Stats : MonoBehaviour
             {
                 this.Value += value;
             }
+            else if ((this.Value + value) < this.MinValue)
+            {
+                this.Value = this.MinValue;
+            }
+            else if ((this.Value + value) > this.MaxValue)
+            {
+                this.Value = this.MaxValue;
+            }
+            else
+            {
+                //how did you get here?S
+            }
         }
 
         public bool inRange(int newVal, int min, int max)
