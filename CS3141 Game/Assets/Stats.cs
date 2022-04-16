@@ -57,15 +57,15 @@ public class Stats : MonoBehaviour
         }
     }
 
-    public Stat energy = new Stat(10);
-    public Stat health = new Stat(10);
-    public Stat intelligence = new Stat(5);
-    public Stat social = new Stat(5);
-    public Stat drunkenness = new Stat(0);
-    public Stat decisionMaking = new Stat(10);
-    public Stat athleticness = new Stat(5);
-    public Stat coldness = new Stat(0);
-    public Stat money = new Stat(0);
+    public Stat energy = new Stat(10, 0, 20);
+    public Stat health = new Stat(10, 0, 10);
+    public Stat intelligence = new Stat(5, 1, 10);
+    public Stat social = new Stat(5, 0, 10);
+    public Stat drunkenness = new Stat(0, 0, 10);
+    public Stat decisionMaking = new Stat(10, 0, 10);
+    public Stat athleticness = new Stat(5, 0, 10);
+    public Stat coldness = new Stat(0, 0, 10);
+    public Stat money = new Stat(0, 0, 99);
 
    public void printStats()
     {
