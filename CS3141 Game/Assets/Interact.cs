@@ -40,7 +40,8 @@ public class Interact : MonoBehaviour
         {
             if(Input.GetKeyDown(interactKey)) //true if interact key (space) is pressed down
             {
-                ShowMessage(resultMessage);
+                //try 
+                //{
                 stats.energy.changeStat(energyInc);
                 stats.intelligence.changeStat(intelligenceInc);
                 stats.health.changeStat(healthInc);
@@ -53,7 +54,13 @@ public class Interact : MonoBehaviour
 
                 timeClock.passTime(timeCostHours, timeCostMinutes);
 
+                ShowMessage(resultMessage);
+
                 interact.Invoke(); //invoke event
+                //}
+                //catch (exception statOutOfBounds) {
+                    ShowMessage
+                //}
             }
         }
     }

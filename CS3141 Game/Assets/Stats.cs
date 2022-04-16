@@ -9,12 +9,18 @@ public class Stats : MonoBehaviour
     public class Stat
     {
         int Value;
+        int MinValue;
+        int MaxValue;
 
-        public Stat(int value)
+        //Constructor
+        public Stat(int value, int minValue, int maxValue)
         {
             this.Value = value;
+            this.MinValue = minValue;
+            this.MaxValue = maxValue;
         }
 
+        //Unsure if I should add check for greater than max or less than min
         public void setStat(int value) 
         {
             this.Value = value;
@@ -32,7 +38,22 @@ public class Stats : MonoBehaviour
 
         public void changeStat(int value)
         {
-            this.Value += value;
+            if (inRange(this.Value + value, this.MinValue, this.MaxValue))
+            {
+                this.Value += value;
+            }
+        }
+
+        public bool inRange(int newVal, int min, int max)
+        {
+            if ((newVal < min) || (newVal > max))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 
