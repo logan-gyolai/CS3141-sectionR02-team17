@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using System;
+using TMPro;
 
 public class GoOutsideMenu : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class GoOutsideMenu : MonoBehaviour
     public bool inRange;
     [SerializeField] string interactMessage;
     [SerializeField] GameObject displayedText;
+    [SerializeField] GameObject titleText;
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +44,7 @@ public class GoOutsideMenu : MonoBehaviour
     public void PauseGame()
     {
         goOutsideMenu.SetActive(true);
+        titleText.GetComponent<TextMeshProUGUI>().text = "Go Outside Menu";
         Time.timeScale = 0f;
         isInMenu = true;
     }
