@@ -27,6 +27,7 @@ public class Interact : MonoBehaviour
     public int timeCostHours = 0;
     public int timeCostMinutes = 0;
     public int energyMod = 0; //used so you can sleep when energy == 0
+    [SerializeField] GoOutsideMenu goOutsideMenu;
 
 
     // Start is called before the first frame update
@@ -38,7 +39,7 @@ public class Interact : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (inRange)
+        if (inRange && !goOutsideMenu.isInMenu)
         {
             if (Input.GetKeyDown(interactKey)) //true if interact key (space) is pressed down
             {

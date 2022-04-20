@@ -83,7 +83,5 @@ public class GoOutsideMenu : MonoBehaviour
             displayedText.GetComponent<TextMesh>().text = text;
         }
     }
-
-    
 }
 
