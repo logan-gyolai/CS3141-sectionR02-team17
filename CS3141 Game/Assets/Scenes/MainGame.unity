@@ -1829,6 +1829,7 @@ GameObject:
   - component: {fileID: 1362156307}
   - component: {fileID: 1362156306}
   - component: {fileID: 1362156305}
+  - component: {fileID: 1362156308}
   m_Layer: 5
   m_Name: Outside Option 1
   m_TagString: Untagged
@@ -1899,7 +1900,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1362156306}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: b8ff5323fb473f14c9decd4ebe875d8d, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1362156306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1938,6 +1951,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1362156303}
   m_CullTransparentMesh: 1
+--- !u!114 &1362156308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362156303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8ff5323fb473f14c9decd4ebe875d8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inRange: 0
+  interactKey: 0
+  interact:
+    m_PersistentCalls:
+      m_Calls: []
+  interactMessage: 
+  resultMessage: 
+  displayedText: {fileID: 0}
+  stats: {fileID: 0}
+  energyInc: 0
+  healthInc: 0
+  intelligenceInc: 0
+  socialInc: 0
+  drunkennessInc: 0
+  athleticnessInc: 0
+  coldnessInc: 0
+  decisionMakingInc: 0
+  moneyInc: 0
+  timeClock: {fileID: 0}
+  timeCostHours: 0
+  timeCostMinutes: 0
+  energyMod: 0
 --- !u!1 &1653505787
 GameObject:
   m_ObjectHideFlags: 0
