@@ -7,12 +7,13 @@ public class TimeClock : MonoBehaviour
 {
     [SerializeField] GameObject clockText;
     [SerializeField] GameObject dayText;
-    public int day = 1;
+    //public int day = 1;
     public class Clock
     {
         
         public int Hours = 13;
         public int Minutes = 0;
+        public int Day = 1;
 
         public Clock()
         {
@@ -25,6 +26,11 @@ public class TimeClock : MonoBehaviour
         public int getMinutes()
         {
             return this.Minutes;
+        }
+
+        public int getDay()
+        {
+            return this.Day;
         }
 
         
@@ -57,13 +63,15 @@ public class TimeClock : MonoBehaviour
 	if(clock.Hours >= 24)
 	{
 	    clock.Hours = clock.Hours - 24;
-	    day = day + 1;
-            if (day == 6) {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //end game
-            }
+	    clock.Day = clock.Day + 1;
 	}
 
         clockText.GetComponent<TextMesh>().text = getTimeString();
-        dayText.GetComponent<TextMesh>().text = "Day " + day.ToString();
+        dayText.GetComponent<TextMesh>().text = "Day " + clock.Day.ToString();
+    }
+
+    public int getDay()
+    {
+        return clock.Day;
     }
 }

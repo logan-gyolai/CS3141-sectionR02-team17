@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using System;
+using UnityEngine.SceneManagement;
 
 public class Interact : MonoBehaviour
 {
@@ -49,6 +50,12 @@ public class Interact : MonoBehaviour
                 }
 
             }
+        }
+
+        int day = timeClock.getDay();
+        if (day > 5)
+        {
+            SceneManager.LoadScene(sceneName: "EndGame");
         }
     }
 
