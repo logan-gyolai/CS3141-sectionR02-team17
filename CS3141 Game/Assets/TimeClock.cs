@@ -58,7 +58,7 @@ public class TimeClock : MonoBehaviour
 	{
 	    clock.Hours = clock.Hours - 24;
 	    day = day + 1;
-            if (day == 4) {
+            if (day == 6) {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //end game
             }
 	}
