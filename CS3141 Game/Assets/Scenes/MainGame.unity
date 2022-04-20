@@ -1317,7 +1317,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Play Broomball
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1739,7 +1739,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clockText: {fileID: 1209537109}
   dayText: {fileID: 859612714}
-  day: 1
 --- !u!102 &1209537111
 TextMesh:
   serializedVersion: 3
@@ -1831,7 +1830,7 @@ GameObject:
   - component: {fileID: 1362156305}
   - component: {fileID: 1362156308}
   m_Layer: 5
-  m_Name: Outside Option 1
+  m_Name: Broomball Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1901,13 +1900,25 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: b8ff5323fb473f14c9decd4ebe875d8d, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1362156308}
+        m_TargetAssemblyTypeName: Interact, Assembly-CSharp
+        m_MethodName: doTheThing
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 475730993}
+        m_TargetAssemblyTypeName: GoOutsideMenu, Assembly-CSharp
+        m_MethodName: ResumeGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1970,19 +1981,19 @@ MonoBehaviour:
       m_Calls: []
   interactMessage: 
   resultMessage: 
-  displayedText: {fileID: 0}
-  stats: {fileID: 0}
-  energyInc: 0
+  displayedText: {fileID: 727714898}
+  stats: {fileID: 794106178}
+  energyInc: -2
   healthInc: 0
   intelligenceInc: 0
   socialInc: 0
   drunkennessInc: 0
-  athleticnessInc: 0
-  coldnessInc: 0
+  athleticnessInc: 1
+  coldnessInc: 3
   decisionMakingInc: 0
   moneyInc: 0
-  timeClock: {fileID: 0}
-  timeCostHours: 0
+  timeClock: {fileID: 1209537110}
+  timeCostHours: 2
   timeCostMinutes: 0
   energyMod: 0
 --- !u!1 &1653505787
