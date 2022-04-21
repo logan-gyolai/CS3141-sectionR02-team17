@@ -199,7 +199,7 @@ MonoBehaviour:
   energyMod: 0
   goOutsideMenu: {fileID: 0}
   randomGenerator: {fileID: 794106179}
-  interactingWith: 
+  interactingWith: Party
 --- !u!114 &103113828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1331,7 +1331,7 @@ MonoBehaviour:
   energyMod: 0
   goOutsideMenu: {fileID: 0}
   randomGenerator: {fileID: 794106179}
-  interactingWith: 
+  interactingWith: Work
 --- !u!114 &701176009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2435,7 +2435,7 @@ MonoBehaviour:
   energyMod: 0
   goOutsideMenu: {fileID: 0}
   randomGenerator: {fileID: 794106179}
-  interactingWith: 
+  interactingWith: Snow Sculpture
 --- !u!114 &992846553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3113,19 +3113,19 @@ MonoBehaviour:
   energyInc: -2
   healthInc: 0
   intelligenceInc: 0
-  socialInc: 0
+  socialInc: 1
   drunkennessInc: 0
-  athleticnessInc: 1
-  coldnessInc: 3
+  athleticnessInc: 0
+  coldnessInc: 0
   decisionMakingInc: 0
   moneyInc: 0
   timeClock: {fileID: 1209537110}
-  timeCostHours: 2
+  timeCostHours: 3
   timeCostMinutes: 0
   energyMod: 0
   goOutsideMenu: {fileID: 0}
   randomGenerator: {fileID: 794106179}
-  interactingWith: 
+  interactingWith: Hockey
 --- !u!114 &1675193280
 MonoBehaviour:
   m_ObjectHideFlags: 0

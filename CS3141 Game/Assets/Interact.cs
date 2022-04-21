@@ -86,12 +86,15 @@ public class Interact : MonoBehaviour
     }
 
     public void doTheThing() {
+
+        // check if we have enough energy
         if (stats.energy.getStat() + energyMod == 0) 
         {
             ShowMessage("You need to sleep");
             return; 
         }
 
+        // Broomball interaction
         if (interactingWith.Equals("Broomball"))
         {
             int yourScore = 0;
@@ -123,6 +126,12 @@ public class Interact : MonoBehaviour
                 resultMessage = "You lost " + yourScore.ToString() + " to " + opponentScore.ToString();
                 athleticnessInc = 1;
             }
+        }
+
+        // Hockey game interaction
+        if (interactingWith.Equals("Hockey"))
+        {
+            resultMessage = "Tech beats NMU 10-0!";
         }
 
         stats.energy.changeStat(energyInc);
