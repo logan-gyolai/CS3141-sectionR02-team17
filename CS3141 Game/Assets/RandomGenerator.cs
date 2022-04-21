@@ -6,7 +6,7 @@ using Random = System.Random;
 
 public class RandomGenerator : MonoBehaviour
 {
-    public Random random;
+    Random random = new Random();
     public double rNorm(double mean, double std)
     {
         double x1 = 1 - random.NextDouble();
@@ -16,14 +16,15 @@ public class RandomGenerator : MonoBehaviour
         return y1 * std + mean;
     }
 
-    public double rChiSq(int df)
+    public bool rBernoulli(double p)
     {
-        return 0;
-    }
+        double x = random.NextDouble();
+        if(x > p)
+        {
+            return true;
+        }
 
-    public int rBernoulli()
-    {
-        return 0;
+        else { return false; }
     }
 
 }

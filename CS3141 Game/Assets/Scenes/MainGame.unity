@@ -198,6 +198,7 @@ MonoBehaviour:
   timeCostMinutes: 0
   energyMod: 0
   goOutsideMenu: {fileID: 0}
+  randomGenerator: {fileID: 794106179}
 --- !u!114 &103113828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1328,6 +1329,7 @@ MonoBehaviour:
   timeCostMinutes: 0
   energyMod: 0
   goOutsideMenu: {fileID: 0}
+  randomGenerator: {fileID: 794106179}
 --- !u!114 &701176009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1543,6 +1545,7 @@ GameObject:
   - component: {fileID: 794106173}
   - component: {fileID: 794106177}
   - component: {fileID: 794106178}
+  - component: {fileID: 794106179}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1661,6 +1664,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statText: {fileID: 1701736781}
+--- !u!114 &794106179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794106172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 776c354bcd7501a448dbd59d3b2935ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &842956068
 GameObject:
   m_ObjectHideFlags: 0
@@ -2090,6 +2105,7 @@ MonoBehaviour:
   timeCostMinutes: 0
   energyMod: 0
   goOutsideMenu: {fileID: 475730993}
+  randomGenerator: {fileID: 794106179}
 --- !u!61 &906837732
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2247,6 +2263,7 @@ MonoBehaviour:
   timeCostMinutes: 0
   energyMod: 1
   goOutsideMenu: {fileID: 475730993}
+  randomGenerator: {fileID: 794106179}
 --- !u!212 &972044937
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2413,6 +2430,7 @@ MonoBehaviour:
   timeCostMinutes: 0
   energyMod: 0
   goOutsideMenu: {fileID: 0}
+  randomGenerator: {fileID: 794106179}
 --- !u!114 &992846553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2810,6 +2828,7 @@ MonoBehaviour:
   timeCostMinutes: 0
   energyMod: 0
   goOutsideMenu: {fileID: 0}
+  randomGenerator: {fileID: 794106179}
 --- !u!1 &1555732584
 GameObject:
   m_ObjectHideFlags: 0
@@ -3099,6 +3118,7 @@ MonoBehaviour:
   timeCostMinutes: 0
   energyMod: 0
   goOutsideMenu: {fileID: 0}
+  randomGenerator: {fileID: 794106179}
 --- !u!114 &1675193280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3787,7 +3807,8 @@ MonoBehaviour:
   timeCostHours: 0
   timeCostMinutes: 0
   energyMod: 0
-  goOutsideMenu: {fileID: 0}
+  goOutsideMenu: {fileID: 475730993}
+  randomGenerator: {fileID: 794106179}
 --- !u!61 &1758642360
 BoxCollider2D:
   m_ObjectHideFlags: 0
