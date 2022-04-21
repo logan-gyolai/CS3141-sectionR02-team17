@@ -197,6 +197,7 @@ MonoBehaviour:
   timeCostHours: 2
   timeCostMinutes: 0
   energyMod: 0
+  goOutsideMenu: {fileID: 0}
 --- !u!114 &103113828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1326,6 +1327,7 @@ MonoBehaviour:
   timeCostHours: 2
   timeCostMinutes: 0
   energyMod: 0
+  goOutsideMenu: {fileID: 0}
 --- !u!114 &701176009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2087,6 +2089,7 @@ MonoBehaviour:
   timeCostHours: 1
   timeCostMinutes: 0
   energyMod: 0
+  goOutsideMenu: {fileID: 475730993}
 --- !u!61 &906837732
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2243,6 +2246,7 @@ MonoBehaviour:
   timeCostHours: 7
   timeCostMinutes: 0
   energyMod: 1
+  goOutsideMenu: {fileID: 475730993}
 --- !u!212 &972044937
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2408,6 +2412,7 @@ MonoBehaviour:
   timeCostHours: 2
   timeCostMinutes: 0
   energyMod: 0
+  goOutsideMenu: {fileID: 0}
 --- !u!114 &992846553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2804,6 +2809,7 @@ MonoBehaviour:
   timeCostHours: 2
   timeCostMinutes: 0
   energyMod: 0
+  goOutsideMenu: {fileID: 0}
 --- !u!1 &1555732584
 GameObject:
   m_ObjectHideFlags: 0
@@ -3092,6 +3098,7 @@ MonoBehaviour:
   timeCostHours: 2
   timeCostMinutes: 0
   energyMod: 0
+  goOutsideMenu: {fileID: 0}
 --- !u!114 &1675193280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3780,6 +3787,7 @@ MonoBehaviour:
   timeCostHours: 0
   timeCostMinutes: 0
   energyMod: 0
+  goOutsideMenu: {fileID: 0}
 --- !u!61 &1758642360
 BoxCollider2D:
   m_ObjectHideFlags: 0
