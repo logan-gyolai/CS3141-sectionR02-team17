@@ -13,7 +13,6 @@ public class Interact : MonoBehaviour
     [SerializeField] string interactMessage;
     [SerializeField] string resultMessage;
     [SerializeField] GameObject displayedText;
-    [SerializeField] Stats stats;
     public int energyInc = 0; //how much this interaction will change this stat
     public int healthInc = 0;
     public int intelligenceInc = 0;
@@ -89,7 +88,7 @@ public class Interact : MonoBehaviour
     public void doTheThing() {
 
         // check if we have enough energy
-        if (stats.energy.getStat() + energyMod == 0) 
+        if (Stats.energy.getStat() + energyMod == 0) 
         {
             ShowMessage("You need to sleep");
             return; 
@@ -142,15 +141,15 @@ public class Interact : MonoBehaviour
             if (gotChlamydia) { Die(); }
         }
 
-        stats.energy.changeStat(energyInc);
-        stats.intelligence.changeStat(intelligenceInc);
-        stats.health.changeStat(healthInc);
-        stats.social.changeStat(socialInc);
-        stats.drunkenness.changeStat(drunkennessInc);
-        stats.decisionMaking.changeStat(decisionMakingInc);
-        stats.athleticness.changeStat(athleticnessInc);
-        stats.coldness.changeStat(coldnessInc);
-        stats.money.changeStat(moneyInc);
+        Stats.energy.changeStat(energyInc);
+        Stats.intelligence.changeStat(intelligenceInc);
+        Stats.health.changeStat(healthInc);
+        Stats.social.changeStat(socialInc);
+        Stats.drunkenness.changeStat(drunkennessInc);
+        Stats.decisionMaking.changeStat(decisionMakingInc);
+        Stats.athleticness.changeStat(athleticnessInc);
+        Stats.coldness.changeStat(coldnessInc);
+        Stats.money.changeStat(moneyInc);
 
         timeClock.passTime(timeCostHours, timeCostMinutes);
 

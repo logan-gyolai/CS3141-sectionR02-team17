@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
-    [SerializeField] Stats stats;
+    
+    [SerializeField] GameObject statText;
     public GameObject pauseMenu;
     public bool isPaused = false;
     public KeyCode pauseKey;
@@ -36,7 +37,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
-        stats.printStats();
+        Stats.printStats(statText) ;
 
 
     }

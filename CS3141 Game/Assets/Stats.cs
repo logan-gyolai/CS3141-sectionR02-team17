@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Stats : MonoBehaviour
 {
-    [SerializeField] GameObject statText;
+    
     public class Stat
     {
         int Value;
@@ -69,17 +69,17 @@ public class Stats : MonoBehaviour
         }
     }
 
-    public Stat energy = new Stat(10, 0, 20);
-    public Stat health = new Stat(10, 0, 10);
-    public Stat intelligence = new Stat(5, 1, 10);
-    public Stat social = new Stat(5, 0, 10);
-    public Stat drunkenness = new Stat(0, 0, 10);
-    public Stat decisionMaking = new Stat(10, 0, 10);
-    public Stat athleticness = new Stat(5, 0, 10);
-    public Stat coldness = new Stat(0, 0, 10);
-    public Stat money = new Stat(0, 0, 99);
+    public static Stat energy = new Stat(10, 0, 20);
+    public static Stat health = new Stat(10, 0, 10);
+    public static Stat intelligence = new Stat(5, 1, 10);
+    public static Stat social = new Stat(5, 0, 10);
+    public static Stat drunkenness = new Stat(0, 0, 10);
+    public static Stat decisionMaking = new Stat(10, 0, 10);
+    public static Stat athleticness = new Stat(5, 0, 10);
+    public static Stat coldness = new Stat(0, 0, 10);
+    public static Stat money = new Stat(0, 0, 99);
 
-    public void printStats()
+    public static void printStats(GameObject statText)
     { 
         string text = "Energy: " + energy.getStatString() +
             "\n Health: " + health.getStatString() +

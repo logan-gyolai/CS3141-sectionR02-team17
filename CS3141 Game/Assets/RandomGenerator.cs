@@ -7,6 +7,8 @@ using Random = System.Random;
 public class RandomGenerator : MonoBehaviour
 {
     Random random = new Random();
+
+    // generates random number from a normal distribution (generally between mean - 2*std and mean + 2*std)
     public double rNorm(double mean, double std)
     {
         double x1 = 1 - random.NextDouble();
@@ -16,6 +18,7 @@ public class RandomGenerator : MonoBehaviour
         return y1 * std + mean;
     }
 
+    // simulates an event with probabilty of p
     public bool rBernoulli(double p)
     {
         double x = random.NextDouble();
