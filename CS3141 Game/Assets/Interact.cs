@@ -17,7 +17,6 @@ public class Interact : MonoBehaviour
     public int healthInc = 0;
     public int intelligenceInc = 0;
     public int socialInc = 0;
-    public int drunkennessInc = 0;
     public int athleticnessInc = 0;
     public int coldnessInc = 0;
     public int decisionMakingInc = 0;
@@ -145,7 +144,6 @@ public class Interact : MonoBehaviour
         Stats.intelligence.changeStat(intelligenceInc);
         Stats.health.changeStat(healthInc);
         Stats.social.changeStat(socialInc);
-        Stats.drunkenness.changeStat(drunkennessInc);
         Stats.decisionMaking.changeStat(decisionMakingInc);
         Stats.athleticness.changeStat(athleticnessInc);
         Stats.coldness.changeStat(coldnessInc);

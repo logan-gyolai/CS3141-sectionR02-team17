@@ -38,8 +38,6 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0f;
         isPaused = true;
         Stats.printStats(statText) ;
-
-
     }
 
     public void ResumeGame()

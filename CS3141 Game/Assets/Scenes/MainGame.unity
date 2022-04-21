@@ -187,7 +187,6 @@ MonoBehaviour:
   healthInc: 0
   intelligenceInc: 0
   socialInc: 0
-  drunkennessInc: 0
   athleticnessInc: 1
   coldnessInc: 3
   decisionMakingInc: 0
@@ -1070,7 +1069,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876a6aadd96679f41b463a5076ffd78a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statText: {fileID: 0}
+  statText: {fileID: 156894351}
   pauseMenu: {fileID: 1805921989}
   isPaused: 0
   pauseKey: 27
@@ -1318,7 +1317,6 @@ MonoBehaviour:
   healthInc: 0
   intelligenceInc: 0
   socialInc: 0
-  drunkennessInc: 0
   athleticnessInc: 1
   coldnessInc: 3
   decisionMakingInc: 0
@@ -2093,7 +2091,6 @@ MonoBehaviour:
   healthInc: 0
   intelligenceInc: 1
   socialInc: 0
-  drunkennessInc: 0
   athleticnessInc: 0
   coldnessInc: 0
   decisionMakingInc: 0
@@ -2248,10 +2245,9 @@ MonoBehaviour:
   resultMessage: You Slept
   displayedText: {fileID: 727714898}
   energyInc: 16
-  healthInc: 0
+  healthInc: 2
   intelligenceInc: 0
   socialInc: 0
-  drunkennessInc: 0
   athleticnessInc: 0
   coldnessInc: 0
   decisionMakingInc: 0
@@ -2418,7 +2414,6 @@ MonoBehaviour:
   healthInc: 0
   intelligenceInc: 0
   socialInc: 0
-  drunkennessInc: 0
   athleticnessInc: 1
   coldnessInc: 3
   decisionMakingInc: 0
@@ -2816,7 +2811,6 @@ MonoBehaviour:
   healthInc: 0
   intelligenceInc: 0
   socialInc: 0
-  drunkennessInc: 0
   athleticnessInc: 1
   coldnessInc: 3
   decisionMakingInc: 0
@@ -3106,7 +3100,6 @@ MonoBehaviour:
   healthInc: 0
   intelligenceInc: 0
   socialInc: 1
-  drunkennessInc: 0
   athleticnessInc: 0
   coldnessInc: 0
   decisionMakingInc: 0
@@ -3796,7 +3789,6 @@ MonoBehaviour:
   healthInc: 0
   intelligenceInc: 0
   socialInc: 0
-  drunkennessInc: 0
   athleticnessInc: 0
   coldnessInc: 0
   decisionMakingInc: 0
