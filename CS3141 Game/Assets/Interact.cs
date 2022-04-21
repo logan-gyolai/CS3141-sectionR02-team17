@@ -92,10 +92,6 @@ public class Interact : MonoBehaviour
 
     public void doTheThing() {
 
-        bool x = randomGenerator.rBernoulli(0.5);
-
-        Debug.Log(x.ToString());
-
         stats.energy.changeStat(energyInc);
         stats.intelligence.changeStat(intelligenceInc);
         stats.health.changeStat(healthInc);
