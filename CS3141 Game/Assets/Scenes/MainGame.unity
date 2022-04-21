@@ -984,7 +984,6 @@ GameObject:
   m_Component:
   - component: {fileID: 483270806}
   - component: {fileID: 483270805}
-  - component: {fileID: 483270807}
   m_Layer: 0
   m_Name: BedroomV2
   m_TagString: Untagged
@@ -1057,22 +1056,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &483270807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 483270804}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 876a6aadd96679f41b463a5076ffd78a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  statText: {fileID: 156894351}
-  pauseMenu: {fileID: 1805921989}
-  isPaused: 0
-  pauseKey: 27
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1542,7 +1525,6 @@ GameObject:
   - component: {fileID: 794106174}
   - component: {fileID: 794106173}
   - component: {fileID: 794106177}
-  - component: {fileID: 794106178}
   - component: {fileID: 794106179}
   m_Layer: 5
   m_Name: Canvas
@@ -1645,22 +1627,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876a6aadd96679f41b463a5076ffd78a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statText: {fileID: 1701736781}
   pauseMenu: {fileID: 1805921989}
   isPaused: 0
   pauseKey: 27
---- !u!114 &794106178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 794106172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fdfaa5c54622954f8023e918ad7c96f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  statText: {fileID: 1701736781}
 --- !u!114 &794106179
 MonoBehaviour:
   m_ObjectHideFlags: 0

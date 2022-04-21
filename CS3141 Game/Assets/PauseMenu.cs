@@ -5,10 +5,11 @@ using UnityEngine;
 public class PauseMenu : MonoBehaviour
 {
     
-    [SerializeField] GameObject statText;
+    
     public GameObject pauseMenu;
     public bool isPaused = false;
     public KeyCode pauseKey;
+    [SerializeField] GameObject statText;
 
     // Start is called before the first frame update
     void Start()
@@ -34,10 +35,15 @@ public class PauseMenu : MonoBehaviour
 
     public void PauseGame()
     {
+        Debug.Log("entered pausegame");
         pauseMenu.SetActive(true);
+        Debug.Log("setactive true");
         Time.timeScale = 0f;
+        Debug.Log("timescale 0");
         isPaused = true;
+        Debug.Log("isPaused true");
         Stats.printStats(statText) ;
+        Debug.Log("printed stats");
     }
 
     public void ResumeGame()
