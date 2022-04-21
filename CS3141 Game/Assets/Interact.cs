@@ -29,6 +29,7 @@ public class Interact : MonoBehaviour
     public int energyMod = 0; //used so you can sleep when energy == 0
     [SerializeField] GoOutsideMenu goOutsideMenu;
     [SerializeField] RandomGenerator randomGenerator;
+    [SerializeField] String interactingWith; //name of what we are doing/interacting with
     
 
 
@@ -45,13 +46,7 @@ public class Interact : MonoBehaviour
         {
             if (Input.GetKeyDown(interactKey)) //true if interact key (space) is pressed down
             {
-                if (stats.energy.getStat() + energyMod == 0) { ShowMessage("You need to sleep"); }
-
-                else
-                {
-                    doTheThing();
-                }
-
+               doTheThing();
             }
         }
 
@@ -91,6 +86,44 @@ public class Interact : MonoBehaviour
     }
 
     public void doTheThing() {
+        if (stats.energy.getStat() + energyMod == 0) 
+        {
+            ShowMessage("You need to sleep");
+            return; 
+        }
+
+        if (interactingWith.Equals("Broomball"))
+        {
+            int yourScore = 0;
+            int opponentScore = 0;
+            bool won = false;
+
+            //generate scores
+            while(yourScore == opponentScore)
+            {
+                yourScore = (int)Math.Round(Math.Abs(randomGenerator.rNorm(0, 4)), 0);
+                opponentScore = (int)Math.Round(Math.Abs(randomGenerator.rNorm(0, 4)), 0);
+            }
+
+            //see who won
+            if(yourScore > opponentScore)
+            {
+                won = true;
+            }
+
+            //put message together
+            if (won) 
+            {
+                resultMessage = "You won " + yourScore.ToString() + " to " + opponentScore.ToString();
+                athleticnessInc = 2;
+            }
+
+            else
+            {
+                resultMessage = "You lost " + yourScore.ToString() + " to " + opponentScore.ToString();
+                athleticnessInc = 1;
+            }
+        }
 
         stats.energy.changeStat(energyInc);
         stats.intelligence.changeStat(intelligenceInc);

@@ -199,6 +199,7 @@ MonoBehaviour:
   energyMod: 0
   goOutsideMenu: {fileID: 0}
   randomGenerator: {fileID: 794106179}
+  interactingWith: 
 --- !u!114 &103113828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1330,6 +1331,7 @@ MonoBehaviour:
   energyMod: 0
   goOutsideMenu: {fileID: 0}
   randomGenerator: {fileID: 794106179}
+  interactingWith: 
 --- !u!114 &701176009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2106,6 +2108,7 @@ MonoBehaviour:
   energyMod: 0
   goOutsideMenu: {fileID: 475730993}
   randomGenerator: {fileID: 794106179}
+  interactingWith: 
 --- !u!61 &906837732
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2264,6 +2267,7 @@ MonoBehaviour:
   energyMod: 1
   goOutsideMenu: {fileID: 475730993}
   randomGenerator: {fileID: 794106179}
+  interactingWith: 
 --- !u!212 &972044937
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2431,6 +2435,7 @@ MonoBehaviour:
   energyMod: 0
   goOutsideMenu: {fileID: 0}
   randomGenerator: {fileID: 794106179}
+  interactingWith: 
 --- !u!114 &992846553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2829,6 +2834,7 @@ MonoBehaviour:
   energyMod: 0
   goOutsideMenu: {fileID: 0}
   randomGenerator: {fileID: 794106179}
+  interactingWith: Broomball
 --- !u!1 &1555732584
 GameObject:
   m_ObjectHideFlags: 0
@@ -3119,6 +3125,7 @@ MonoBehaviour:
   energyMod: 0
   goOutsideMenu: {fileID: 0}
   randomGenerator: {fileID: 794106179}
+  interactingWith: 
 --- !u!114 &1675193280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3809,6 +3816,7 @@ MonoBehaviour:
   energyMod: 0
   goOutsideMenu: {fileID: 475730993}
   randomGenerator: {fileID: 794106179}
+  interactingWith: Dresser
 --- !u!61 &1758642360
 BoxCollider2D:
   m_ObjectHideFlags: 0
