@@ -19,7 +19,7 @@ public class RandomGenerator : MonoBehaviour
     public bool rBernoulli(double p)
     {
         double x = random.NextDouble();
-        if(x > p)
+        if(x < p)
         {
             return true;
         }

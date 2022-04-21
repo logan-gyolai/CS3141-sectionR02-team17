@@ -30,7 +30,8 @@ public class Interact : MonoBehaviour
     [SerializeField] GoOutsideMenu goOutsideMenu;
     [SerializeField] RandomGenerator randomGenerator;
     [SerializeField] String interactingWith; //name of what we are doing/interacting with
-    
+    bool gotChlamydia = false;
+
 
 
     // Start is called before the first frame update
@@ -134,6 +135,13 @@ public class Interact : MonoBehaviour
             resultMessage = "Tech beats NMU 10-0!";
         }
 
+        // party interaction
+        if (interactingWith.Equals("Party"))
+        {
+            gotChlamydia = randomGenerator.rBernoulli(0.1);
+            if (gotChlamydia) { Die(); }
+        }
+
         stats.energy.changeStat(energyInc);
         stats.intelligence.changeStat(intelligenceInc);
         stats.health.changeStat(healthInc);
@@ -149,5 +157,9 @@ public class Interact : MonoBehaviour
         ShowMessage(resultMessage);
 
         interact.Invoke(); //invoke event
-    } 
+    }
+
+    public void Die() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
 }
