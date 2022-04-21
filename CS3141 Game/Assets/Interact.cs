@@ -93,6 +93,12 @@ public class Interact : MonoBehaviour
             return; 
         }
 
+        // Work Interaction
+        if(interactingWith.Equals("Work"))
+        {
+
+        }
+
         // Broomball interaction
         if (interactingWith.Equals("Broomball"))
         {

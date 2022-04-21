@@ -1313,16 +1313,16 @@ MonoBehaviour:
   interactMessage: 
   resultMessage: 
   displayedText: {fileID: 727714898}
-  energyInc: -2
+  energyInc: -3
   healthInc: 0
   intelligenceInc: 0
   socialInc: 0
   athleticnessInc: 1
-  coldnessInc: 3
+  coldnessInc: 0
   decisionMakingInc: 0
   moneyInc: 0
   timeClock: {fileID: 1209537110}
-  timeCostHours: 2
+  timeCostHours: 3
   timeCostMinutes: 0
   energyMod: 0
   goOutsideMenu: {fileID: 0}
@@ -1523,7 +1523,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 727714898}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.35, z: 5}
+  m_LocalPosition: {x: 0, y: -0.45, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2072,7 +2072,7 @@ MonoBehaviour:
   interact:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 906837730}
         m_TargetAssemblyTypeName: Stats, Assembly-CSharp
         m_MethodName: 
         m_Mode: 1
