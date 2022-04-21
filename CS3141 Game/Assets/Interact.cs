@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.Events;
 using System;
 using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
+
 
 public class Interact : MonoBehaviour
 {
@@ -86,6 +88,9 @@ public class Interact : MonoBehaviour
 
     public void doTheThing() {
 
+        // Seed the random number generator so it is more random
+        Random.InitState(Guid.NewGuid().GetHashCode());
+
         // check if we have enough energy
         if (Stats.energy.getStat() + energyMod == 0) 
         {
@@ -96,6 +101,22 @@ public class Interact : MonoBehaviour
         // Work Interaction
         if(interactingWith.Equals("Work"))
         {
+            // generate a random event at work
+            int outcome = Random.Range(0, 100);
+            if (outcome < 98) // real bad outcome
+            {
+                ShowMessage("You clogged the toilet at work and the manager made you pay for it. You lost $20");
+                socialInc = -2;
+                moneyInc = -20;
+                energyInc = -5;
+            }
+            else if(outcome >= 98)
+            {
+                ShowMessage("The big party must have liked you; they tipped big.");
+                moneyInc = 30;
+                socialInc = 1;
+                energyInc = -2;
+            }
 
         }
 
