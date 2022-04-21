@@ -105,14 +105,14 @@ public class Interact : MonoBehaviour
             int outcome = Random.Range(0, 100);
             if (outcome < 98) // real bad outcome
             {
-                ShowMessage("You clogged the toilet at work and the manager made you pay for it. You lost $20");
+                resultMessage = "You clogged the toilet at work and the manager made you pay for it. You lost $20";
                 socialInc = -2;
                 moneyInc = -20;
                 energyInc = -5;
             }
             else if(outcome >= 98)
             {
-                ShowMessage("The big party must have liked you; they tipped big.");
+                resultMessage = "The big party must have liked you; they tipped big.";
                 moneyInc = 30;
                 socialInc = 1;
                 energyInc = -2;

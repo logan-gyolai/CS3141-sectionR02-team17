@@ -35,15 +35,10 @@ public class PauseMenu : MonoBehaviour
 
     public void PauseGame()
     {
-        Debug.Log("entered pausegame");
         pauseMenu.SetActive(true);
-        Debug.Log("setactive true");
         Time.timeScale = 0f;
-        Debug.Log("timescale 0");
         isPaused = true;
-        Debug.Log("isPaused true");
         Stats.printStats(statText) ;
-        Debug.Log("printed stats");
     }
 
     public void ResumeGame()
