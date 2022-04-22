@@ -117,7 +117,6 @@ public class Interact : MonoBehaviour
         socialInc = 0;
         athleticnessInc = 0;
         coldnessInc = 0;
-        decisionMakingInc = 0;
         moneyInc = 0;
 
         // check if we have enough energy
@@ -366,7 +365,6 @@ public class Interact : MonoBehaviour
         Stats.intelligence.changeStat(intelligenceInc);
         Stats.health.changeStat(healthInc);
         Stats.social.changeStat(socialInc);
-        Stats.decisionMaking.changeStat(decisionMakingInc);
         Stats.athleticness.changeStat(athleticnessInc);
         Stats.coldness.changeStat(coldnessInc);
         Stats.money.changeStat(moneyInc);

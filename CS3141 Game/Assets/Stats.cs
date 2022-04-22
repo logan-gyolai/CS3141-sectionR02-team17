@@ -73,7 +73,6 @@ public class Stats : MonoBehaviour
     public static Stat health = new Stat(10, -10, 10);
     public static Stat intelligence = new Stat(5, 1, 99);
     public static Stat social = new Stat(5, 0, 99);
-    public static Stat decisionMaking = new Stat(10, 0, 10);
     public static Stat athleticness = new Stat(5, 0, 99);
     public static Stat coldness = new Stat(0, 0, 10);
     public static Stat money = new Stat(0, -99, 99);
@@ -84,7 +83,6 @@ public class Stats : MonoBehaviour
             "\n Health: " + health.getStatString() +
             "\n Intelligence: " + intelligence.getStatString() +
             "\n Social: " + social.getStatString() +
-            "\n Decision Making: " + decisionMaking.getStatString() +
             "\n Athleticness: " + athleticness.getStatString() +
             "\n Coldness: " + coldness.getStatString() +
             "\n Money: " + money.getStatString()
