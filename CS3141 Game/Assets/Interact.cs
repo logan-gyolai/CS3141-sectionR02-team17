@@ -132,8 +132,23 @@ public class Interact : MonoBehaviour
             return;
         }
 
+        // Study Interaction
+        if (interactingWith.Equals("Desk"))
+        {
+            energyInc = -1;
+            intelligenceInc = 1;
+        }
+
+        // Bed Interaction
+        if (interactingWith.Equals("Bed"))
+        {
+            energyInc = 16;
+            healthInc = 2;
+            coldnessInc = -8;
+        }
+
         // Work Interaction
-            if (interactingWith.Equals("Work"))
+        if (interactingWith.Equals("Work"))
         {
             // generate a random event at work
             int outcome = Random.Range(0, 100);
@@ -180,6 +195,7 @@ public class Interact : MonoBehaviour
         if (interactingWith.Equals("Broomball"))
         {
             energyInc = -3;
+            coldnessInc = 5;
 
             // Check the player's health, don't let them play if they're too injured.
             if (Stats.health.getStat() <= 0)
@@ -292,7 +308,7 @@ public class Interact : MonoBehaviour
             }
             else if ((outcome + Stats.social.getStat()) < 50)
             {
-                resultMessage = "Some guy cornered you to talk about partial physics for three hours";
+                resultMessage = "Some guy talked about partial physics for three hours";
                 intelligenceInc = 3;
             }
             else if ((outcome + Stats.social.getStat()) < 60)
@@ -308,7 +324,7 @@ public class Interact : MonoBehaviour
             }
             else if ((outcome + Stats.social.getStat()) < 70)
             {
-                resultMessage = "Your dance moves attracted lots of attention. And dollar bills";
+                resultMessage = "Your dance moves attracted lots of attention.s And dollar bills";
                 socialInc = 3;
                 moneyInc = 12;
             }
@@ -342,6 +358,8 @@ public class Interact : MonoBehaviour
         // Hockey game interaction
         if (interactingWith.Equals("Hockey"))
         {
+            energyInc = -1;
+            socialInc = 2;
             resultMessage = "Tech beats NMU 10-0!";
         }
 
@@ -353,8 +371,12 @@ public class Interact : MonoBehaviour
             coldnessInc = 5;
             energyInc = -3;
             SculptureTime += 3;
+            resultMessage = "You made progress and had a great time";
 
-            if(SculptureTime > 10) { CompleteSculpture = true; }
+            if(SculptureTime > 10) { 
+                CompleteSculpture = true;
+                resultMessage = "You finished the statue!";
+            }
         }
 
         if (interactingWith.Equals("Consume Soup"))

@@ -2217,7 +2217,7 @@ MonoBehaviour:
   energyMod: 0
   goOutsideMenu: {fileID: 475730993}
   randomGenerator: {fileID: 794106179}
-  interactingWith: 
+  interactingWith: Desk
   BroomballChampion: 0
   BrokeBitch: 0
   Workaholic: 0
@@ -2380,7 +2380,7 @@ MonoBehaviour:
   energyMod: 1
   goOutsideMenu: {fileID: 475730993}
   randomGenerator: {fileID: 794106179}
-  interactingWith: 
+  interactingWith: Bed
   BroomballChampion: 0
   BrokeBitch: 0
   Workaholic: 0
