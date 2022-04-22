@@ -11,7 +11,7 @@ public class EndScreen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (Stats.money.getStat() == 0) { Interact.BrokeBitch = true; }
+        if (Stats.money.getStat() <= 0) { Interact.BrokeBitch = true; }
         printEndScreen();
     }
 
