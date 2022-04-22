@@ -41,12 +41,12 @@ public class Interact : MonoBehaviour
     static int SculptureTime = 0;
 
     // Achievements
-    public bool BroomballChampion   = false;
-    public bool BrokeBitch          = false;
-    public bool Workaholic          = false;
-    public bool CompleteSculpture   = false;
-    public bool SoupTime            = false;
-    public bool gotChlamydia        = false;
+    public static bool BroomballChampion   = false;
+    public static bool BrokeBitch          = false;
+    public static bool Workaholic          = false;
+    public static bool CompleteSculpture   = false;
+    public static bool SoupTime            = false;
+    public static bool gotChlamydia        = false;
 
     
 
@@ -399,10 +399,6 @@ public class Interact : MonoBehaviour
         ShowMessage(resultMessage);
 
         interact.Invoke(); //invoke event
-    }
-
-    public void Die() {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void Sleep()

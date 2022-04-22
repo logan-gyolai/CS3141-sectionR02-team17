@@ -59,12 +59,17 @@ public class TimeClock : MonoBehaviour
     {
         clock.Hours += hours;
         clock.Minutes += minutes;
+        if (clock.Minutes >= 60)
+        {
+            clock.Hours += 1;
+            clock.Minutes -= 60;
+        }
 
-	if(clock.Hours >= 24)
-	{
-	    clock.Hours = clock.Hours - 24;
-	    clock.Day = clock.Day + 1;
-	}
+	    if(clock.Hours >= 24)
+	    {
+	        clock.Hours = clock.Hours - 24;
+	        clock.Day = clock.Day + 1;
+	    }
 
         clockText.GetComponent<TextMesh>().text = getTimeString();
         dayText.GetComponent<TextMesh>().text = "Day " + clock.Day.ToString();
