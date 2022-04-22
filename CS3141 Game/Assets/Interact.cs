@@ -41,13 +41,13 @@ public class Interact : MonoBehaviour
     static int SculptureTime = 0;
 
     // Achievements
-    public static bool BroomballChampion   = false;
-    public static bool BrokeBitch          = false;
-    public static bool Workaholic          = false;
-    public static bool CompleteSculpture   = false;
-    public static bool SoupTime            = false;
-    public static bool gotChlamydia        = false;
-
+    public static bool BroomballChampion    = false;
+    public static bool BrokeBitch           = false;
+    public static bool Workaholic           = false;
+    public static bool CompleteSculpture    = false;
+    public static bool SoupTime             = false;
+    public static bool gotChlamydia         = false;
+    public static bool Ouch                 = false;
     
 
 
@@ -228,11 +228,13 @@ public class Interact : MonoBehaviour
             if ( (outcome + Stats.athleticness.getStat()) < 10 )
             {
                 injuryStr = ". Your ankle may also be broken.";
+                Ouch = true;
                 healthInc = -20;
             }
             else if ( (outcome + Stats.athleticness.getStat()) < 20)
             {
                 injuryStr = ". You also got a concussion.";
+                Ouch = true;
                 healthInc = -5;
                 decisionMakingInc = -3;
             }

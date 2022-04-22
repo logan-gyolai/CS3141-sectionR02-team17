@@ -48,7 +48,11 @@ public class EndScreen : MonoBehaviour
         }
         if (Interact.gotChlamydia)
         {
-            text = text + "Intimate Encounter \n";
+            text = text + "Disappoint the Dean \n";
+        }
+        if (Interact.Ouch)
+        {
+            text = text + "Ouch \n";
         }
         achievementText.GetComponent<TextMeshProUGUI>().text = text;
     }
