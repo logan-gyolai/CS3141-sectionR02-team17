@@ -195,7 +195,7 @@ public class Interact : MonoBehaviour
         if (interactingWith.Equals("Broomball"))
         {
             energyInc = -3;
-            coldnessInc = 5;
+            coldnessInc = 3;
 
             // Check the player's health, don't let them play if they're too injured.
             if (Stats.health.getStat() <= 0)
