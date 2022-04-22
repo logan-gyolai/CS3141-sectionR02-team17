@@ -244,18 +244,20 @@ public class Interact : MonoBehaviour
             }
         }
 
-        // Hockey game interaction
-        if (interactingWith.Equals("Hockey"))
-        {
-            resultMessage = "Tech beats NMU 10-0!";
-        }
-
         // party interaction
         if (interactingWith.Equals("Party"))
         {
             gotChlamydia = randomGenerator.rBernoulli(0.1);
             if (gotChlamydia) { Die(); }
         }
+
+        // Hockey game interaction
+        if (interactingWith.Equals("Hockey"))
+        {
+            resultMessage = "Tech beats NMU 10-0!";
+        }
+
+        
 
         // Building Snow Sculpture
         if (interactingWith.Equals("Snow Sculpture"))
