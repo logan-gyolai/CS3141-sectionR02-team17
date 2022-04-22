@@ -48,12 +48,14 @@ public class Interact : MonoBehaviour
     public bool SoupTime            = false;
     public bool gotChlamydia        = false;
 
+    
 
 
     // Start is called before the first frame update
     void Start()
     {
-
+        // Seed the random number generator so it is more random
+        Random.InitState(Guid.NewGuid().GetHashCode());
     }
 
     // Update is called once per frame
@@ -102,10 +104,9 @@ public class Interact : MonoBehaviour
         }
     }
 
-    public void doTheThing() {
 
-        // Seed the random number generator so it is more random
-        Random.InitState(Guid.NewGuid().GetHashCode());
+
+    public void doTheThing() {
 
         // Set all the increases back to 0. There was an oversight where we were setting the Inc value to an amount 
         // and then sometimes it would affect the stat regardless of what was happening. 
@@ -178,6 +179,8 @@ public class Interact : MonoBehaviour
         // Broomball interaction
         if (interactingWith.Equals("Broomball"))
         {
+            energyInc = -3;
+
             // Check the player's health, don't let them play if they're too injured.
             if (Stats.health.getStat() <= 0)
             {
