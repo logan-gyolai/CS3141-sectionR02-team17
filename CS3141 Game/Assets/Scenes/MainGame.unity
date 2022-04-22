@@ -202,6 +202,8 @@ MonoBehaviour:
   BrokeBitch: 0
   Workaholic: 0
   CompleteSculpture: 0
+  SoupTime: 0
+  gotChlamydia: 0
 --- !u!114 &103113828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1319,6 +1321,8 @@ MonoBehaviour:
   BrokeBitch: 0
   Workaholic: 0
   CompleteSculpture: 0
+  SoupTime: 0
+  gotChlamydia: 0
 --- !u!114 &701176009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2218,6 +2222,8 @@ MonoBehaviour:
   BrokeBitch: 0
   Workaholic: 0
   CompleteSculpture: 0
+  SoupTime: 0
+  gotChlamydia: 0
 --- !u!61 &906837732
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2345,13 +2351,13 @@ MonoBehaviour:
   interact:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 972044935}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 972044936}
+        m_TargetAssemblyTypeName: Interact, Assembly-CSharp
+        m_MethodName: Sleep
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2379,6 +2385,8 @@ MonoBehaviour:
   BrokeBitch: 0
   Workaholic: 0
   CompleteSculpture: 0
+  SoupTime: 0
+  gotChlamydia: 0
 --- !u!212 &972044937
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2549,6 +2557,8 @@ MonoBehaviour:
   BrokeBitch: 0
   Workaholic: 0
   CompleteSculpture: 0
+  SoupTime: 0
+  gotChlamydia: 0
 --- !u!114 &992616178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2734,6 +2744,8 @@ MonoBehaviour:
   BrokeBitch: 0
   Workaholic: 0
   CompleteSculpture: 0
+  SoupTime: 0
+  gotChlamydia: 0
 --- !u!114 &992846553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3135,6 +3147,8 @@ MonoBehaviour:
   BrokeBitch: 0
   Workaholic: 0
   CompleteSculpture: 0
+  SoupTime: 0
+  gotChlamydia: 0
 --- !u!1 &1555732584
 GameObject:
   m_ObjectHideFlags: 0
@@ -3429,6 +3443,8 @@ MonoBehaviour:
   BrokeBitch: 0
   Workaholic: 0
   CompleteSculpture: 0
+  SoupTime: 0
+  gotChlamydia: 0
 --- !u!114 &1675193280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4122,6 +4138,8 @@ MonoBehaviour:
   BrokeBitch: 0
   Workaholic: 0
   CompleteSculpture: 0
+  SoupTime: 0
+  gotChlamydia: 0
 --- !u!61 &1758642360
 BoxCollider2D:
   m_ObjectHideFlags: 0

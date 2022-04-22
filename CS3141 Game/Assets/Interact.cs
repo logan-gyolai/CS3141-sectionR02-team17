@@ -33,7 +33,7 @@ public class Interact : MonoBehaviour
     [SerializeField] GoOutsideMenu goOutsideMenu;
     [SerializeField] RandomGenerator randomGenerator;
     [SerializeField] String interactingWith; //name of what we are doing/interacting with
-    bool gotChlamydia = false;
+    
 
 
     // Initialize trackers for all the stats
@@ -46,6 +46,7 @@ public class Interact : MonoBehaviour
     public bool Workaholic          = false;
     public bool CompleteSculpture   = false;
     public bool SoupTime            = false;
+    public bool gotChlamydia        = false;
 
 
 
@@ -107,7 +108,9 @@ public class Interact : MonoBehaviour
         Random.InitState(Guid.NewGuid().GetHashCode());
 
         // Set all the increases back to 0. There was an oversight where we were setting the Inc value to an amount 
-        // and then sometimes it would affect the stat regardless of what was happening.
+        // and then sometimes it would affect the stat regardless of what was happening. 
+        // Now all stat changes should happen here instead of the Unity Interact script menu because I think these might overwrite those values and therefore
+        // stats might not change how they're supposed to.
         energyInc = 0; //how much this interaction will change this stat
         healthInc = 0;
         intelligenceInc = 0;
@@ -247,8 +250,91 @@ public class Interact : MonoBehaviour
         // party interaction
         if (interactingWith.Equals("Party"))
         {
-            gotChlamydia = randomGenerator.rBernoulli(0.1);
-            if (gotChlamydia) { Die(); }
+            int outcome = Random.Range(0, 100);
+
+            energyInc = -2;
+
+            if(outcome < 3 || outcome == 91)
+            {
+                resultMessage = "You disappointed the Dean...";
+                gotChlamydia = true;
+                socialInc = -25;
+                energyInc = -4; // This activity is probably a tad more physically tiring
+            }
+            else if( (outcome + Stats.social.getStat()) < 10 )
+            {
+                resultMessage = "Did you spill a drink or pee your pants? Either way you looked like a fool";
+                socialInc = -5;
+            }
+            else if ((outcome + Stats.social.getStat()) < 20)
+            {
+                resultMessage = "You rocked karaoke night";
+                socialInc = 2;
+            }
+            else if ((outcome + Stats.social.getStat()) < 27)
+            {
+                resultMessage = "One tequilla, two tequilla, three tequilla, floor";
+                socialInc = 1;
+                healthInc = -1;
+                timeClock.passTime(5,0); // Because you passed out
+            }
+            else if ((outcome + Stats.social.getStat()) < 40)
+            {
+                resultMessage = "Meh. The party was okay.";
+                socialInc = 1;
+            }
+            else if ((outcome + Stats.social.getStat()) < 45)
+            {
+                resultMessage = "You won a pushup contest";
+                athleticnessInc = 2;
+            }
+            else if ((outcome + Stats.social.getStat()) < 50)
+            {
+                resultMessage = "Some guy cornered you to talk about partial physics for three hours";
+                intelligenceInc = 3;
+            }
+            else if ((outcome + Stats.social.getStat()) < 60)
+            {
+                resultMessage = "Your conspiracy theories were the life of the party";
+                socialInc = 7;
+            }
+            else if ((outcome + Stats.social.getStat()) < 65)
+            {
+                resultMessage = "Your \"breathe fire\" trick didn't quite go as planned...";
+                socialInc = -10;
+                moneyInc = -25;
+            }
+            else if ((outcome + Stats.social.getStat()) < 70)
+            {
+                resultMessage = "Your dance moves attracted lots of attention. And dollar bills";
+                socialInc = 3;
+                moneyInc = 12;
+            }
+            else if ((outcome + Stats.social.getStat()) < 75)
+            {
+                resultMessage = "Your bagpipes weren't a hit with the others";
+                socialInc = -3;
+            }
+            else if ((outcome + Stats.social.getStat()) < 80)
+            {
+                resultMessage = "Your bagpipe playing was a huge hit";
+                socialInc = 5;
+            }
+            else if ((outcome + Stats.social.getStat()) < 90)
+            {
+                resultMessage = "You made some new friends";
+                socialInc = 3;
+            }
+            else if ((outcome + Stats.social.getStat()) < 100)
+            {
+                resultMessage = "Regrettable decisions were made";
+                socialInc = -3;
+            }
+            else if ((outcome + Stats.social.getStat()) < 110)
+            {
+                resultMessage = "You were the life of the party";
+                socialInc = 3;
+            }
         }
 
         // Hockey game interaction
@@ -294,5 +380,10 @@ public class Interact : MonoBehaviour
 
     public void Die() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void Sleep()
+    {
+        Stats.energy.changeStat(16);
     }
 }
