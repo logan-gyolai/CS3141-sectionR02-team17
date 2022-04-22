@@ -92,25 +92,44 @@ public class Interact : MonoBehaviour
         Random.InitState(Guid.NewGuid().GetHashCode());
 
         // check if we have enough energy
-        if (Stats.energy.getStat() + energyMod == 0) 
+        if (Stats.energy.getStat() + energyMod == 0)
         {
             ShowMessage("You need to sleep");
-            return; 
+            return;
         }
 
         // Work Interaction
-        if(interactingWith.Equals("Work"))
+        if (interactingWith.Equals("Work"))
         {
             // generate a random event at work
             int outcome = Random.Range(0, 100);
-            if (outcome < 98) // real bad outcome
+            if (outcome < 5) // real bad outcome
             {
                 resultMessage = "You clogged the toilet at work and the manager made you pay for it. You lost $20";
                 socialInc = -2;
                 moneyInc = -20;
                 energyInc = -5;
             }
-            else if(outcome >= 98)
+            else if (outcome < 10)
+            {
+                resultMessage = "A child threw up on you, but her mother tipped you well.";
+                socialInc = -1;
+                moneyInc = 20;
+                energyInc = -4;
+            }
+            else if (outcome < 15)
+            {
+                resultMessage = "Someone lit a fire in the bathroom. It may have been you.";
+                moneyInc = 5;
+                energyInc = -1;
+            }
+            else if (outcome < 90)
+            {
+                resultMessage = "You worked a shift. Nothing special happened.";
+                moneyInc = 10;
+                energyInc = -2;
+            }
+            else
             {
                 resultMessage = "The big party must have liked you; they tipped big.";
                 moneyInc = 30;
@@ -123,6 +142,15 @@ public class Interact : MonoBehaviour
         // Broomball interaction
         if (interactingWith.Equals("Broomball"))
         {
+            // Check the player's health, don't let them play if they're too injured.
+            if (Stats.health.getStat() == 0)
+            {
+                ShowMessage("You're too hurt to play Broomball. You should rest");
+                return;
+            }
+
+            // Initialize variables that will be used in this event
+            int outcome = Random.Range(0, 100);
             int yourScore = 0;
             int opponentScore = 0;
             bool won = false;
@@ -140,16 +168,34 @@ public class Interact : MonoBehaviour
                 won = true;
             }
 
+            // Did the player get hurt?
+            string injuryStr = "";
+            if ( (outcome + Stats.athleticness.getStat()) < 10 )
+            {
+                injuryStr = ". Your ankle may also be broken.";
+                healthInc = -10;
+            }
+            else if ( (outcome + Stats.athleticness.getStat()) < 20)
+            {
+                injuryStr = ". You also got a concussion.";
+                healthInc = -5;
+            }
+            else if ( (outcome + (int)Stats.athleticness.getStat()) < 50)
+            {
+                injuryStr = ". It's gonna hurt to sit for a few days.";
+                healthInc = -2;
+            }
+
             //put message together
             if (won) 
             {
-                resultMessage = "You won " + yourScore.ToString() + " to " + opponentScore.ToString();
+                resultMessage = "You won " + yourScore.ToString() + " to " + opponentScore.ToString() + injuryStr;
                 athleticnessInc = 2;
             }
 
             else
             {
-                resultMessage = "You lost " + yourScore.ToString() + " to " + opponentScore.ToString();
+                resultMessage = "You lost " + yourScore.ToString() + " to " + opponentScore.ToString() + injuryStr;
                 athleticnessInc = 1;
             }
         }

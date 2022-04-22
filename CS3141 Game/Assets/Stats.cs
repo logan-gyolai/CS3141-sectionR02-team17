@@ -76,7 +76,7 @@ public class Stats : MonoBehaviour
     public static Stat decisionMaking = new Stat(10, 0, 10);
     public static Stat athleticness = new Stat(5, 0, 99);
     public static Stat coldness = new Stat(0, 0, 10);
-    public static Stat money = new Stat(0, 0, 99);
+    public static Stat money = new Stat(0, -99, 99);
 
     public static void printStats(GameObject statText)
     { 
