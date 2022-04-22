@@ -70,7 +70,7 @@ public class Stats : MonoBehaviour
     }
 
     public static Stat energy = new Stat(10, 0, 20);
-    public static Stat health = new Stat(10, 0, 10);
+    public static Stat health = new Stat(10, -10, 10);
     public static Stat intelligence = new Stat(5, 1, 99);
     public static Stat social = new Stat(5, 0, 99);
     public static Stat decisionMaking = new Stat(10, 0, 10);

@@ -15,6 +15,8 @@ public class Interact : MonoBehaviour
     [SerializeField] string interactMessage;
     [SerializeField] string resultMessage;
     [SerializeField] GameObject displayedText;
+
+    // Initialize stats
     public int energyInc = 0; //how much this interaction will change this stat
     public int healthInc = 0;
     public int intelligenceInc = 0;
@@ -23,6 +25,7 @@ public class Interact : MonoBehaviour
     public int coldnessInc = 0;
     public int decisionMakingInc = 0;
     public int moneyInc = 0;
+
     [SerializeField] TimeClock timeClock;
     public int timeCostHours = 0;
     public int timeCostMinutes = 0;
@@ -31,6 +34,18 @@ public class Interact : MonoBehaviour
     [SerializeField] RandomGenerator randomGenerator;
     [SerializeField] String interactingWith; //name of what we are doing/interacting with
     bool gotChlamydia = false;
+
+
+    // Initialize trackers for all the stats
+    static int broomballWins = 0;
+    static int SculptureTime = 0;
+
+    // Achievements
+    public bool BroomballChampion   = false;
+    public bool BrokeBitch          = false;
+    public bool Workaholic          = false;
+    public bool CompleteSculpture   = false;
+    public bool SoupTime            = false;
 
 
 
@@ -91,15 +106,31 @@ public class Interact : MonoBehaviour
         // Seed the random number generator so it is more random
         Random.InitState(Guid.NewGuid().GetHashCode());
 
+        // Set all the increases back to 0. There was an oversight where we were setting the Inc value to an amount 
+        // and then sometimes it would affect the stat regardless of what was happening.
+        energyInc = 0; //how much this interaction will change this stat
+        healthInc = 0;
+        intelligenceInc = 0;
+        socialInc = 0;
+        athleticnessInc = 0;
+        coldnessInc = 0;
+        decisionMakingInc = 0;
+        moneyInc = 0;
+
         // check if we have enough energy
         if (Stats.energy.getStat() + energyMod == 0)
         {
             ShowMessage("You need to sleep");
             return;
         }
+        else if( (interactingWith.Equals("Broomball") | interactingWith.Equals("Snow Sculpture")) & (Stats.coldness.getStat() == 10) )
+        {
+            ShowMessage( "You're a little cold. You should rest or eat soup" );
+            return;
+        }
 
         // Work Interaction
-        if (interactingWith.Equals("Work"))
+            if (interactingWith.Equals("Work"))
         {
             // generate a random event at work
             int outcome = Random.Range(0, 100);
@@ -137,13 +168,16 @@ public class Interact : MonoBehaviour
                 energyInc = -2;
             }
 
+            if (Stats.money.getStat() < -95)        { BrokeBitch = true; }
+            else if (Stats.money.getStat() > 95)    { Workaholic = true; }
+
         }
 
         // Broomball interaction
         if (interactingWith.Equals("Broomball"))
         {
             // Check the player's health, don't let them play if they're too injured.
-            if (Stats.health.getStat() == 0)
+            if (Stats.health.getStat() <= 0)
             {
                 ShowMessage("You're too hurt to play Broomball. You should rest");
                 return;
@@ -173,30 +207,40 @@ public class Interact : MonoBehaviour
             if ( (outcome + Stats.athleticness.getStat()) < 10 )
             {
                 injuryStr = ". Your ankle may also be broken.";
-                healthInc = -10;
+                healthInc = -20;
             }
             else if ( (outcome + Stats.athleticness.getStat()) < 20)
             {
                 injuryStr = ". You also got a concussion.";
                 healthInc = -5;
+                decisionMakingInc = -3;
             }
             else if ( (outcome + (int)Stats.athleticness.getStat()) < 50)
             {
-                injuryStr = ". It's gonna hurt to sit for a few days.";
+                injuryStr = ". You're gonna be sore for a few days.";
                 healthInc = -2;
             }
+            else { healthInc = 0;  }
 
             //put message together
             if (won) 
             {
                 resultMessage = "You won " + yourScore.ToString() + " to " + opponentScore.ToString() + injuryStr;
                 athleticnessInc = 2;
+                broomballWins++;
             }
 
             else
             {
                 resultMessage = "You lost " + yourScore.ToString() + " to " + opponentScore.ToString() + injuryStr;
                 athleticnessInc = 1;
+                broomballWins = -100;
+            }
+
+            if(broomballWins == 3) 
+            { 
+                BroomballChampion = true;
+                resultMessage = "You've won the Broomball Championship!";
             }
         }
 
@@ -211,6 +255,23 @@ public class Interact : MonoBehaviour
         {
             gotChlamydia = randomGenerator.rBernoulli(0.1);
             if (gotChlamydia) { Die(); }
+        }
+
+        // Building Snow Sculpture
+        if (interactingWith.Equals("Snow Sculpture"))
+        {
+            coldnessInc = 5;
+            energyInc = -3;
+            SculptureTime += 3;
+
+            if(SculptureTime > 10) { CompleteSculpture = true; }
+        }
+
+        if (interactingWith.Equals("Consume Soup"))
+        {
+            coldnessInc = -5;
+            energyInc = 1;
+            SoupTime = true;
         }
 
         Stats.energy.changeStat(energyInc);
