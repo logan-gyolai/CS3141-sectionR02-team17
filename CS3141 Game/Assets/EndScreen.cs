@@ -6,6 +6,7 @@ public class EndScreen : MonoBehaviour
 {
     [SerializeField] GameObject endText;
     [SerializeField] GameObject statText;
+    [SerializeField] GameObject achievementText;
 
     // Start is called before the first frame update
     void Start()
