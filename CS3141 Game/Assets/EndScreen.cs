@@ -31,7 +31,7 @@ public class EndScreen : MonoBehaviour
         }
         if (Interact.BrokeBitch)
         {
-            text = text + "Broke Bitch \n";
+            text = text + "Go broke \n";
         }
         if (Interact.Workaholic)
         {
