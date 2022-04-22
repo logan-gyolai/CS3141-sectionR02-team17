@@ -12,6 +12,7 @@ public class EndScreen : MonoBehaviour
     void Start()
     {
         if (Stats.money.getStat() <= 0) { Interact.BrokeBitch = true; }
+        else if (Stats.money.getStat() > 95) { Interact.Workaholic = true; }
         printEndScreen();
     }
 
